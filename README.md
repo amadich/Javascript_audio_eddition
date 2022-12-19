@@ -52,6 +52,10 @@ function volume() {
 btn_play.addEventListener("click",audio_play);
 btn_stop.addEventListener("click",audio_pause);
 range_volume.addEventListener("change",volume);
+audio.addEventListener('playing', () => {
+        btn_play.style.display = "none";
+        btn_stop.style.display = "block";
+    })
 audio.addEventListener("pause", () => {
     btn_play.style.display = "block";
     btn_stop.style.display = "none";
